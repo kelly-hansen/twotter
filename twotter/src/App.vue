@@ -1,11 +1,26 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    @{{ user.username }}
+  </div>
 </template>
 
 <script>
 
 export default {
-  name: 'App'
+  name: 'App',
+  data() {
+    return {
+      followers: 0,
+      user: {
+        id: 1,
+        username: 'SweetTooth182',
+        firstName: 'Kelly',
+        lastName: 'Hansen' ,
+        email: 'slsethhansen@gmail.com',
+        isAdmin: true
+      }
+    }
+  }
 }
 </script>
 
