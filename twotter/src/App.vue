@@ -1,50 +1,16 @@
 <template>
   <div id="app">
-    @{{ user.username }} - {{ fullName }}
-    <strong>Followers: </strong> {{ followers }}
-    <div v-if="user.isAdmin">Admin</div>
+    <UserProfile/>
   </div>
 </template>
 
 <script>
+import UserProfile from './components/UserProfile';
 
 export default {
   name: 'App',
-  data() {
-    return {
-      followers: 0,
-      user: {
-        id: 1,
-        username: 'SweetTooth182',
-        firstName: 'Kelly',
-        lastName: 'Hansen' ,
-        email: 'slsethhansen@gmail.com',
-        isAdmin: true
-      }
-    }
-  },
-  watch: {
-    followers(newFollowerCount, oldFollowerCount) {
-      if (oldFollowerCount < newFollowerCount) {
-        console.log(`${this.user.username} has gained a follower!`);
-      }
-    }
-  },
-  computed: {
-    fullName() {
-      return `${this.user.firstName} ${this.user.lastName}`;
-    }
-  },
-  methods: {
-    followUser() {
-      this.followers++
-    }
-  },
-  mounted() {
-    this.followUser();
-  }
+  components: { UserProfile }
 }
-
 </script>
 
 <style>
@@ -53,8 +19,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  min-height: 100vh;
+  background-color: #F3F5FA;
 }
 </style>
