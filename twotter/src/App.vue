@@ -2,6 +2,7 @@
   <div id="app">
     @{{ user.username }} - {{ fullName }}
     <strong>Followers: </strong> {{ followers }}
+    <button @click="followUser">Follow</button>
   </div>
 </template>
 
