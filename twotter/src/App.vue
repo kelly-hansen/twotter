@@ -2,7 +2,7 @@
   <div id="app">
     @{{ user.username }} - {{ fullName }}
     <strong>Followers: </strong> {{ followers }}
-    <button @click="followUser">Follow</button>
+    <div v-if="user.isAdmin">Admin</div>
   </div>
 </template>
 
@@ -44,6 +44,7 @@ export default {
     this.followUser();
   }
 }
+
 </script>
 
 <style>
