@@ -34,6 +34,8 @@ export default {
   components: { TwootItem },
   data() {
     return {
+      newTwootContent: '',
+      selectedTwootType: 'instant',
       twootTypes: [
         { value: 'draft', name: 'Draft' },
         { value: 'instant', name: 'Instant Twoot'}
