@@ -91,7 +91,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .user-profile {
   display: grid;
   grid-template-columns: 1fr 3fr;
